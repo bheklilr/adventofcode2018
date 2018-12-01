@@ -25,4 +25,4 @@ cli.command("day [day]").action(async (args: Vorpal.Args) => {
         console.log();
     }
 });
-cli.delimiter("aoc >").show();
+cli.delimiter("").show().parse(process.argv);
