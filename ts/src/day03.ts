@@ -116,9 +116,11 @@ export function part2() {
         for (let j = i + 1; j < claims.length; j++) {
             let overlap = calculateOverlap(claims[i], claims[j]);
             if (overlap !== undefined) {
-                allIds = allIds.filter(id => id != claims[i].id || id != claims[j].id);
+                let id1 = claims[i].id;
+                let id2 = claims[j].id;
+                allIds = allIds.filter(id => id !== id1).filter(id => id !== id2);
             }
         }
     }
-    return allIds;
+    return allIds[0];
 }
