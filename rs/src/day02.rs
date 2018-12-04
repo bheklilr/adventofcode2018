@@ -44,7 +44,7 @@ pub fn part2() -> String {
     let lines: Vec<&str> = input.split("\n").collect();
 
     for i in 0..lines.len() {
-        for j in (i+1)..lines.len() {
+        for j in (i + 1)..lines.len() {
             let l1: Vec<char> = lines[i].chars().collect();
             let l2: Vec<char> = lines[j].chars().collect();
 

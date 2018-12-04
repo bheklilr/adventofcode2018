@@ -1,5 +1,6 @@
 extern crate chrono;
 extern crate clap;
+extern crate regex;
 
 use chrono::prelude::*;
 use clap::{App, Arg};
