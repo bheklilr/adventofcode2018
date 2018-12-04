@@ -7,3 +7,4 @@ authors = ["Aaron Stevens <bheklilr2@gmail.com>"]
 clap = "2.32"
 chrono = "0.4.6"
 itertools = "*"
+regex = "*"
