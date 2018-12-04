@@ -10,7 +10,7 @@ pub fn part1() -> i32 {
     let mut threes = 0i32;
 
     for line in lines {
-        let mut chars: Vec<char> = line.split("").chars().collect();
+        let mut chars: Vec<char> = line.chars().collect();
         let mut map: HashMap<char, i32> = HashMap::new();
 
         for c in chars {
@@ -21,7 +21,6 @@ pub fn part1() -> i32 {
         let mut has_two = false;
         let mut has_three = false;
         for entry in map.iter() {
-            print!("{}:{} ", entry.0, entry.1);
             if *entry.1 == 2i32 {
                 has_two = true;
             }
@@ -29,7 +28,6 @@ pub fn part1() -> i32 {
                 has_three = true;
             }
         }
-        println!();
 
         if has_two {
             twos += 1;
@@ -38,7 +36,6 @@ pub fn part1() -> i32 {
             threes += 1;
         }
     }
-    println!("{} : {}", twos, threes);
     twos * threes
 }
 
