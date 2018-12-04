@@ -39,8 +39,28 @@ pub fn part1() -> i32 {
     twos * threes
 }
 
-pub fn part2() -> i32 {
-    0
+pub fn part2() -> String {
+    let input = INPUT.to_string();
+    let lines: Vec<&str> = input.split("\n").collect();
+
+    for i in 0..lines.len() {
+        for j in (i+1)..lines.len() {
+            let l1: Vec<char> = lines[i].chars().collect();
+            let l2: Vec<char> = lines[j].chars().collect();
+
+            let mut common: Vec<char> = Vec::new();
+            for k in 0..l1.len() {
+                if l1[k] == l2[k] {
+                    common.push(l1[k]);
+                }
+            }
+            if common.len() == l1.len() - 1 {
+                return common.iter().collect();
+            }
+        }
+    }
+
+    "".to_string()
 }
 
 pub fn run() {
